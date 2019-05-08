@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <!-- vue-app是根容器 -->
+    <div id="vue-app">
+       <h1> Events </h1>
+       <button @click="add(1)">长了一岁</button>
+       <!-- 第二种形式  <button v-on:click="add(1)">长了一岁</button>-->
+       <button @click="subtract(1)">减了一岁</button>      <!-- 单击事件 -->
+
+       <button @dblclick="add(10)">长了十岁</button>
+       <button @dblclick="subtract(10)">减了十岁</button>   <!-- 双击事件 -->
+       <p>My age is {{age}}</p>
+       <div id="canvas" v-on:mousemove="updateXY">{{x}},{{y}}</div>      <!-- 鼠标移动坐标事件 -->
+    </div>
+    <script src="app2.js"></script>
+</body>
+</html>
